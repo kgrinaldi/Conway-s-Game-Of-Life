@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>630</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>JFrame
+--
+
+--
+
+--
+Responsibilities
+-- Provided by Java Swing API
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>460</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>LifeApp
+--
+LifePanel lp
+LifeControls cp
+--
+
+--
+Responsibilities
+-- Primary application container</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>0</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>JPanel
+--
+
+--
+
+--
+Responsibilities
+-- Provided by Java Swing API</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>170</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LifeControls
+--
+JButton startButton // start animation
+JButton stopButton // stop animation
+JButton stepButton // single step
+JButton clearButton // clear grid
+JButton loadShape // read pre-stored shapes
+--
+
+--
+Responsibilities
+-- Container for system controls</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>300</y>
+      <w>210</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+GridBase
+--
+#grid : int[][]
+#height : int
+#width : int
+--
++getWidth() : int
++getHeight() : int
++setWidth(int) : void
++setHeight(int) : void
++setGridCell(int col, int row, int value) : void &lt;abstract&gt;
++getGridCell(int col, int row) : int &lt;abstract&gt;
++clear() : void &lt;abstract&gt;
+--
+Responsibilities
+-- Basic functionality of the grid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>630</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+RuleSetInterface
+--
+
+--
++ApplyRule(GridBase grid) : void
+--
+Responsibilities
+-- Provides prototypes for rulesets
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>610</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>LifeGrid
+--
+
+--
+
+--
+Responsibilities
+-- Implementation class for the grid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>810</y>
+      <w>250</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Conway
+--
++ApplyRule(GridBase grid) : void
++checkSurrounding(int, int, GridBase)
+--
+
+--
+Responsibilities
+-- Implements Conway rule set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>810</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Custom
+--
++ApplyRule(GridBase grid) : void
+--
+
+--
+Responsibilities
+-- Implements custom rule set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>570</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>110</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;30.0;10.0;30.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>110</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;130.0;30.0;130.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>750</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;100.0;40.0;100.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>750</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;30.0;10.0;30.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>540</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>350</y>
+      <w>90</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;50.0;70.0;50.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>570</y>
+      <w>260</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;240.0;40.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>50</x>
+      <y>0</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Conway's Game of Life
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>170</y>
+      <w>260</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>LifePanel
+--
+ActionListener start
+ActionListener stop
+ActionListener step
+ActionListener clear
+ActionListener save
+ActionListener load
+int width
+int height
+int cellWidth
+int cellHeight
+MouseListener anonymousClass
+Timer timer
+--
++Start()
++Stop()
++Step()
++Clear()
++Save()
++Load()
++savePattern()
++loadPattern()
++paint(Graphics g)
+--
+Responsibilities
+-- Graphical display and mouse handler
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
